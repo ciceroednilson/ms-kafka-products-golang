@@ -31,8 +31,6 @@ The principal objective of this project is to show how to use Golang with Apache
 
 ![docs_readme/consumer.drawio.png](docs_readme/consumer.drawio.png)
 
-## ⚙️ Create a Database.
-
 
 ## ⚙️ Creating a Database on MySQL.
 
