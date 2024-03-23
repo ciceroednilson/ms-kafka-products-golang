@@ -28,3 +28,5 @@ The principal objective of this project is to show how to use Golang with Apache
 ![docs_readme/producer.drawio.png](docs_readme/producer.drawio.png)
 
 ## ⚙️ Architecture of Consumer.
+
+![docs_readme/consumer.drawio.png](docs_readme/consumer.drawio.png)
