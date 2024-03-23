@@ -70,7 +70,7 @@ Execute the command below to create of the infrastructure.
 sudo docker-compose up -d --build
 ~~~~
 
-If you don't have MySQL installed, you need to execute the command below to create a container of MySQL.
+If you don't have MySQL installed, you need to execute the commands below to create a container of MySQL.
 
 ~~~~shell
 docker pull mysql
