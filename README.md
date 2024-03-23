@@ -19,6 +19,12 @@ The principal objective of this project is to show how to use Golang with Apache
   <li>Apache Kafka</li>
 </ol>
 
-## ⚙️ Architecture.
+## ⚙️ Architecture General.
 
 ![docs_readme/archicture_new.png](docs_readme/diagrams_architecture_source.drawio.png)
+
+## ⚙️ Architecture of Producer.
+
+![docs_readme/producer.drawio.png](docs_readme/producer.drawio.png)
+
+## ⚙️ Architecture of Consumer.
