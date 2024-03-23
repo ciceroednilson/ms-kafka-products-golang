@@ -139,11 +139,11 @@ After you post a message, you shall see in UI of Kafka.
 
 ![docs_readme/consumer_kafka.png](docs_readme/consumer_kafka.png)
 
-## ⚙️ See your information on the Database..
+## ⚙️ See your information on the Database.
 
 ![docs_readme/mysql_data.png](docs_readme/mysql_data.png)
 
-## 📌 Documentation swaggo
+## 📌 Documentation swaggo.
 
 https://github.com/swaggo/http-swagger
 
