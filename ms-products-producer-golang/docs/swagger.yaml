@@ -14,20 +14,6 @@ definitions:
       total:
         type: integer
     type: object
-  response.ProductResponse:
-    description: ProductResponse Product fields
-    properties:
-      created:
-        type: string
-      description:
-        type: string
-      id:
-        type: integer
-      price:
-        type: string
-      total:
-        type: integer
-    type: object
 externalDocs:
   description: Create Swagger docs with swaggo
   url: https://github.com/swaggo/http-swagger
@@ -46,20 +32,6 @@ info:
   version: "1.0"
 paths:
   /products:
-    get:
-      description: find array of products
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            items:
-              $ref: '#/definitions/response.ProductResponse'
-            type: array
-      summary: Product
-      tags:
-      - product
     post:
       consumes:
       - application/json
@@ -76,61 +48,6 @@ paths:
       responses:
         "200":
           description: OK
-      summary: Product
-      tags:
-      - product
-    put:
-      consumes:
-      - application/json
-      description: update register of product
-      parameters:
-      - description: query params
-        in: body
-        name: request
-        required: true
-        schema:
-          $ref: '#/definitions/request.ProductRequest'
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-      summary: Product
-      tags:
-      - product
-  /products/{key}/:
-    delete:
-      description: delete a product details
-      parameters:
-      - description: delete product by key
-        format: int
-        in: query
-        name: key
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-      summary: Product
-      tags:
-      - product
-  /products/{key}/details:
-    get:
-      description: find a product details
-      parameters:
-      - description: product search by key
-        format: int
-        in: query
-        name: key
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/response.ProductResponse'
       summary: Product
       tags:
       - product
