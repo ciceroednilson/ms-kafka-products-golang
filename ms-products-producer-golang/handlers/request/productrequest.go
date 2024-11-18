@@ -1,6 +1,6 @@
 package request
 
-import "go/core/domain/productdomain"
+import "module.mod/core/domain/productdomain"
 
 // Product request
 // @Description ProductRequest

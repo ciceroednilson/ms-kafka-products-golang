@@ -3,11 +3,12 @@ package productrepository
 import (
 	"encoding/json"
 	"fmt"
-	"go/core/ports"
-	"go/infrastructure/entities"
+
 	"os"
 
 	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"module.mod/core/ports"
+	"module.mod/infrastructure/entities"
 )
 
 type Repository struct {

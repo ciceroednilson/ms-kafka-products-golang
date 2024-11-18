@@ -2,10 +2,12 @@ package productmapper
 
 import (
 	"fmt"
-	"go/core/domain/productdomain"
-	"go/infrastructure/entities"
+
 	"strconv"
 	"time"
+
+	"module.mod/core/domain/productdomain"
+	"module.mod/infrastructure/entities"
 )
 
 func EntityToDomain(product *entities.Product) *productdomain.Product {

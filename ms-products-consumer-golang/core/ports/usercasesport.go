@@ -1,7 +1,7 @@
 package ports
 
-import "go/core/domain/productdomain"
+import "module.mod/core/domain/productdomain"
 
-type ProductUsercasePort interface {
+type ProductUsecasePort interface {
 	Save(product productdomain.Product) error
 }

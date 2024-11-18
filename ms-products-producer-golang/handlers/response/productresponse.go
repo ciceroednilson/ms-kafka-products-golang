@@ -1,8 +1,6 @@
 package response
 
-import (
-	"go/core/domain/productdomain"
-)
+import "module.mod/core/domain/productdomain"
 
 // Product response
 // @Description ProductResponse

@@ -2,18 +2,20 @@ package producthandler
 
 import (
 	"encoding/json"
-	"go/core/ports"
-	"go/handlers/request"
+
 	"net/http"
+
+	"module.mod/core/ports"
+	"module.mod/handlers/request"
 )
 
 type ProductHandler struct {
-	ProductUsercasePort ports.ProductUsercasePort
+	ProductUsecasePort ports.ProductUsecasePort
 }
 
-func NewProductHandler(productUsercasePort ports.ProductUsercasePort) ProductHandler {
+func NewProductHandler(productUsecasePort ports.ProductUsecasePort) ProductHandler {
 	return ProductHandler{
-		ProductUsercasePort: productUsercasePort,
+		ProductUsecasePort: productUsecasePort,
 	}
 }
 
@@ -33,7 +35,7 @@ func (p *ProductHandler) Create(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 	domain := request.ToDomain()
-	err = p.ProductUsercasePort.Save(domain)
+	err = p.ProductUsecasePort.Save(domain)
 	if err != nil {
 		panic(err)
 	}

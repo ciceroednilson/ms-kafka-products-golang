@@ -1,6 +1,6 @@
 package request
 
-import "go/core/domain/productdomain"
+import "module.mod/core/domain/productdomain"
 
 type ProductRequest struct {
 	Id          int     `json:"id"`

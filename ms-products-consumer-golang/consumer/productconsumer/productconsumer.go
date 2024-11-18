@@ -1,23 +1,23 @@
 package productconsumer
 
 import (
-	"go/consumer/request"
-	"go/core/ports"
+	"module.mod/consumer/request"
+	"module.mod/core/ports"
 )
 
 type ProductConsumer struct {
-	ProductUsercasePort ports.ProductUsercasePort
+	ProductUsecasePort ports.ProductUsecasePort
 }
 
-func NewProductConsumer(productUsercasePort ports.ProductUsercasePort) ProductConsumer {
+func NewProductConsumer(productUsecasePort ports.ProductUsecasePort) ProductConsumer {
 	return ProductConsumer{
-		ProductUsercasePort: productUsercasePort,
+		ProductUsecasePort: productUsecasePort,
 	}
 }
 
 func (p *ProductConsumer) Create(request request.ProductRequest) {
 	domain := request.ToDomain()
-	err := p.ProductUsercasePort.Save(domain)
+	err := p.ProductUsecasePort.Save(domain)
 	if err != nil {
 		panic(err)
 	}

@@ -1,13 +1,13 @@
-package productusercase_test
+package productusecase_test
 
 import (
-	"go/core/domain/productdomain"
-	"go/core/ports"
-	"go/core/usercases/productusercase"
-	"go/infrastructure/entities"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"module.mod/core/domain/productdomain"
+	"module.mod/core/ports"
+	"module.mod/core/usecases/productusecase"
+	"module.mod/infrastructure/entities"
 )
 
 type ProductRepositoryMock struct{}
@@ -22,13 +22,13 @@ func (p *ProductRepositoryMock) Save(product entities.Product) error {
 
 func Test_SaveProduct(t *testing.T) {
 	productrepositoryMock := NewProductRepositoryMock()
-	productusercase := productusercase.NewProductUserCase(productrepositoryMock)
+	productusecase := productusecase.NewProductUseCase(productrepositoryMock)
 	product := productdomain.Product{
 		Description: "Bola",
 		Price:       1.00,
 		Total:       10,
 		Created:     "2024-01-05 02:58:06",
 	}
-	err := productusercase.Save(product)
+	err := productusecase.Save(product)
 	assert.Nil(t, err)
 }

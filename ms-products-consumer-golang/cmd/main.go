@@ -3,20 +3,20 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"go/consumer/productconsumer"
-	"go/consumer/request"
-	"go/core/usercases/productusercase"
-	_ "go/docs"
-	"go/infrastructure/repositories/productrepository"
+
 	"os"
 
 	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"module.mod/consumer/productconsumer"
+	"module.mod/consumer/request"
+	"module.mod/core/usecases/productusecase"
+	"module.mod/infrastructure/repositories/productrepository"
 )
 
 func main() {
 	productrepository := productrepository.NewRepository()
-	productusercase := productusercase.NewProductUserCase(productrepository)
-	productconsumer := productconsumer.NewProductConsumer(productusercase)
+	productusecase := productusecase.NewProductUseCase(productrepository)
+	productconsumer := productconsumer.NewProductConsumer(productusecase)
 	startConsumer(productconsumer)
 }
 

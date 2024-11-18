@@ -1,9 +1,10 @@
 package productmapper
 
 import (
-	"go/core/domain/productdomain"
-	"go/infrastructure/entities"
 	"time"
+
+	"module.mod/core/domain/productdomain"
+	"module.mod/infrastructure/entities"
 )
 
 func ToEntity(p productdomain.Product) entities.Product {

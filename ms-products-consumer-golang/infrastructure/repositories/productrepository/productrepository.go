@@ -3,10 +3,12 @@ package productrepository
 import (
 	"database/sql"
 	"fmt"
-	"go/core/ports"
-	"go/infrastructure/entities"
-	"go/util/mysql"
+
 	"log"
+
+	"module.mod/core/ports"
+	"module.mod/infrastructure/entities"
+	"module.mod/util/mysql"
 )
 
 const selectAllProducts = "SELECT id, description, price, total, created FROM tb_product"

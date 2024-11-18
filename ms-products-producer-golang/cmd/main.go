@@ -1,16 +1,15 @@
 package main
 
 import (
-	"go/core/usercases/productusercase"
-	_ "go/docs"
-	"go/handlers/producthandler"
-	"go/infrastructure/repositories/productrepository"
 	"log"
 	"net/http"
 	"time"
 
 	"github.com/gorilla/mux"
 	httpSwagger "github.com/swaggo/http-swagger"
+	"module.mod/core/usecases/productusecase"
+	"module.mod/handlers/producthandler"
+	"module.mod/infrastructure/repositories/productrepository"
 )
 
 // @title           Swagger Product API
@@ -32,8 +31,8 @@ import (
 // @BasePath /
 func main() {
 	productrepository := productrepository.NewRepository()
-	productusercase := productusercase.NewProductUserCase(productrepository)
-	producthandler := producthandler.NewProductHandler(productusercase)
+	productusecase := productusecase.NewProductUseCase(productrepository)
+	producthandler := producthandler.NewProductHandler(productusecase)
 	initialServer(producthandler)
 }
 
